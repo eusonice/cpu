@@ -12,3 +12,4 @@ Built with Logisim, my CPU implements the following:
 - a control logic created using ROM
 - 2 stage pipeline
 - handles control hazards 
+  - flushes stage 1 instruction when the stage 2 instruction branch is taken with no-op
