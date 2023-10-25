@@ -1,15 +1,13 @@
-# 61C Project 3: CPU
+# CPU
 
 ## Spec:
-> The full spec can be read here: https://cs61c.org/sp22/projects/proj3/
+> The full spec can be read [here](https://cs61c.org/sp22/projects/proj3/).
 
-A CPU that runs actual RISC-V 32-bit ISA instructions.  
-
-~~Insert image here~~
+A CPU that runs actual RISC-V 32-bit ISA instructions, using Venus and Logisim.  
 
 ## Notes: 
-Built with Logisim, my CPU implements the following:
-- a control logic created using ROM
+My CPU supports the following:
+- a datapath that includes ALU, RegFile, Immediate Generator, Branch Comparator, DMEM, etc, to support different types of instructions.
+- control logic is created using ROM, for less wiring
 - 2 stage pipeline
-- handles control hazards 
-  - flushes stage 1 instruction when the stage 2 instruction branch is taken with no-op
+- handles control hazards when branching with control logic signal and no-op that flush the pipeline
